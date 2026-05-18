@@ -1,0 +1,6 @@
+{
+  "limit": 20,
+  "gate_mode": "manual",
+  "dry_run": true,
+  "allow_send": false
+}

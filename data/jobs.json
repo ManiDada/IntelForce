@@ -1,0 +1,38 @@
+{
+  "jobs": [
+    {
+      "id": "upwork_022021643031290259540",
+      "platform": "upwork",
+      "title": "AI GTM Engineer for Marketing, Sales & Product Workflows",
+      "description": "We need an AI GTM Engineer to build automated workflows for our marketing, sales, and product teams. You'll integrate AI tools with our existing CRM and marketing stack, build data pipelines, and create automated reporting systems.",
+      "required_skills": "python, api integration, openai, automation, crm",
+      "budget_min": 8,
+      "budget_max": 10,
+      "budget_type": "hourly",
+      "proposals_count": 4,
+      "client_rating": 5.0,
+      "client_spent": "$300K+",
+      "client_verified": true,
+      "url": "https://www.upwork.com/jobs/~022021643031290259540",
+      "status": "discovered"
+    },
+    {
+      "id": "upwork_ai_automation_dev_llm",
+      "platform": "upwork",
+      "title": "AI Automation Developer for Data Summarization and LLM Integration",
+      "description": "Looking for an experienced developer to build AI-powered data summarization and LLM integration pipelines. Must have experience with OpenAI API, data processing, and automation.",
+      "required_skills": "python, openai, langchain, api integration, automation",
+      "budget_min": 500,
+      "budget_max": 1500,
+      "budget_type": "fixed",
+      "proposals_count": 50,
+      "client_rating": 4.9,
+      "client_spent": "$10K+",
+      "client_verified": true,
+      "url": "https://www.upwork.com/jobs/~ai-automation-llm",
+      "status": "discovered"
+    }
+  ],
+  "updated": "2026-05-19T00:00:00Z",
+  "total": 2
+}

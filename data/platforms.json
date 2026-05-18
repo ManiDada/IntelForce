@@ -1,0 +1,37 @@
+{
+  "platforms": [
+    {
+      "id": "upwork",
+      "name": "Upwork",
+      "priority": 1,
+      "active": true,
+      "notes": "Primary platform. Best client quality, highest volume, best budgets.",
+      "fee_pct": 10,
+      "rss_available": true
+    },
+    {
+      "id": "fiverr",
+      "name": "Fiverr",
+      "priority": 2,
+      "active": false,
+      "notes": "Good for productized/repeatable services.",
+      "fee_pct": 20
+    },
+    {
+      "id": "freelancer",
+      "name": "Freelancer.com",
+      "priority": 3,
+      "active": false,
+      "notes": "More price-sensitive but higher volume.",
+      "fee_pct": 10
+    },
+    {
+      "id": "pph",
+      "name": "PeoplePerHour",
+      "priority": 4,
+      "active": false,
+      "notes": "UK-focused, GBP payments.",
+      "fee_pct": 15
+    }
+  ]
+}

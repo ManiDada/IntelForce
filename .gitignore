@@ -1,0 +1,15 @@
+.env
+data/jobs.db
+data/jobs.db-shm
+data/jobs.db-wal
+data/revenue-scout-latest.json
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+node_modules/
+.coverage

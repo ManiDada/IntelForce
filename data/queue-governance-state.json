@@ -1,0 +1,21 @@
+{
+  "blocked": true,
+  "checked_at": "2026-05-18T23:12:05.118171+00:00",
+  "active_build_lane": 0,
+  "scored_candidates": 3,
+  "pending_proposals": 0,
+  "status_counts": {
+    "proposal_ready": 1,
+    "scored": 2
+  },
+  "top_scored": [
+    {
+      "id": "test_idem_001",
+      "title": "API integration test",
+      "status": "proposal_ready",
+      "score": 89.8
+    }
+  ],
+  "escalation_level": "critical",
+  "recommended_action": "Escalate to operator: scored proposals exist but no active build lane. Review proposals/pending/ and approve submissions."
+}

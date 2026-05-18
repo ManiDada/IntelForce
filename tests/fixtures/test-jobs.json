@@ -1,0 +1,70 @@
+{
+  "jobs": [
+    {
+      "id": "test_high_ev_001",
+      "platform": "upwork",
+      "title": "Build Zapier automation for lead routing",
+      "description": "We need a Zapier workflow to route leads from our website form to HubSpot and notify the sales team on Slack.",
+      "required_skills": "zapier, api integration, hubspot, slack",
+      "budget_min": 500,
+      "budget_max": 800,
+      "budget_type": "fixed",
+      "proposals_count": 6,
+      "client_rating": 4.9,
+      "client_spent": "$5K+",
+      "client_verified": true,
+      "url": "https://www.upwork.com/jobs/~test001",
+      "status": "discovered"
+    },
+    {
+      "id": "test_medium_ev_002",
+      "platform": "upwork",
+      "title": "Python web scraper for e-commerce pricing",
+      "description": "Need a scraper to monitor competitor pricing across 5 e-commerce sites daily.",
+      "required_skills": "python, web scraping, selenium",
+      "budget_min": 300,
+      "budget_max": 600,
+      "budget_type": "fixed",
+      "proposals_count": 18,
+      "client_rating": 4.7,
+      "client_spent": "$2K+",
+      "client_verified": true,
+      "url": "https://www.upwork.com/jobs/~test002",
+      "status": "discovered"
+    },
+    {
+      "id": "test_red_flag_003",
+      "platform": "upwork",
+      "title": "Simple task - cheapest option needed ASAP",
+      "description": "Quick simple task for the cheapest developer. Need it done in 24 hours.",
+      "required_skills": "python",
+      "budget_min": 50,
+      "budget_max": 100,
+      "budget_type": "fixed",
+      "proposals_count": 35,
+      "client_rating": null,
+      "client_spent": null,
+      "client_verified": false,
+      "url": "https://www.upwork.com/jobs/~test003",
+      "status": "discovered"
+    },
+    {
+      "id": "test_low_competition_004",
+      "platform": "upwork",
+      "title": "n8n workflow for invoice processing automation",
+      "description": "Build an n8n workflow that processes incoming invoices, extracts data, updates our accounting system, and sends notifications.",
+      "required_skills": "n8n, automation, api integration",
+      "budget_min": 800,
+      "budget_max": 1500,
+      "budget_type": "fixed",
+      "proposals_count": 3,
+      "client_rating": 5.0,
+      "client_spent": "$50K+",
+      "client_verified": true,
+      "url": "https://www.upwork.com/jobs/~test004",
+      "status": "discovered"
+    }
+  ],
+  "updated": "2026-05-19T00:00:00Z",
+  "total": 4
+}

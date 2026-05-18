@@ -1,0 +1,23 @@
+{
+  "updated": "2026-05-19",
+  "skills": [
+    {"skill": "python", "current_level": 85, "target_level": 90, "tier": 1},
+    {"skill": "api_integration", "current_level": 85, "target_level": 90, "tier": 1},
+    {"skill": "web_scraping", "current_level": 80, "target_level": 90, "tier": 1},
+    {"skill": "openai_claude", "current_level": 80, "target_level": 90, "tier": 1},
+    {"skill": "javascript_nodejs", "current_level": 80, "target_level": 85, "tier": 1},
+    {"skill": "webhooks_rest", "current_level": 75, "target_level": 85, "tier": 1},
+    {"skill": "zapier", "current_level": 70, "target_level": 80, "tier": 1},
+    {"skill": "n8n", "current_level": 40, "target_level": 85, "tier": 2, "priority": "critical", "market_jobs_week": 20},
+    {"skill": "whatsapp_business_api", "current_level": 40, "target_level": 80, "tier": 2, "market_jobs_week": 20},
+    {"skill": "make_com", "current_level": 50, "target_level": 80, "tier": 2, "market_jobs_week": 15},
+    {"skill": "hubspot", "current_level": 35, "target_level": 75, "tier": 2, "market_jobs_week": 12},
+    {"skill": "salesforce", "current_level": 40, "target_level": 70, "tier": 2},
+    {"skill": "zoho", "current_level": 40, "target_level": 70, "tier": 2},
+    {"skill": "rag_vector_dbs", "current_level": 65, "target_level": 85, "tier": 2},
+    {"skill": "langchain", "current_level": 60, "target_level": 85, "tier": 2},
+    {"skill": "voice_agents_vapi_retell", "current_level": 30, "target_level": 75, "tier": 3, "pay_range": "800-3000"},
+    {"skill": "gohighlevel", "current_level": 20, "target_level": 70, "tier": 3, "pay_range": "500-1500"},
+    {"skill": "twilio", "current_level": 40, "target_level": 75, "tier": 3, "pay_range": "400-1200"}
+  ]
+}

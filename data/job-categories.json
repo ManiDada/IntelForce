@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {"type": "Simple Form Automation", "frequency_pct": 15, "budget_min": 150, "budget_max": 500, "duration_days": "1-3", "solo_testable_pct": 100, "tier": "easy_win"},
+    {"type": "Multi-Step Data Pipeline", "frequency_pct": 20, "budget_min": 300, "budget_max": 1500, "duration_days": "3-7", "solo_testable_pct": 95, "tier": "easy_win"},
+    {"type": "CRM Data Entry Automation", "frequency_pct": 18, "budget_min": 200, "budget_max": 1000, "duration_days": "2-5", "solo_testable_pct": 70, "tier": "easy_win"},
+    {"type": "CRM Workflow & Automation Setup", "frequency_pct": 15, "budget_min": 500, "budget_max": 3000, "duration_weeks": "1-2", "solo_testable_pct": 50, "tier": "level_up"},
+    {"type": "Two-System API Integration", "frequency_pct": 25, "budget_min": 200, "budget_max": 1500, "duration_days": "2-7", "solo_testable_pct": 85, "tier": "easy_win"},
+    {"type": "Multi-System Integration Hub", "frequency_pct": 10, "budget_min": 800, "budget_max": 5000, "duration_weeks": "1-3", "solo_testable_pct": 65, "tier": "level_up"},
+    {"type": "WhatsApp Auto-Responder", "frequency_pct": 12, "budget_min": 150, "budget_max": 600, "duration_days": "2-4", "solo_testable_pct": 90, "tier": "level_up"},
+    {"type": "WhatsApp-CRM Full Integration", "frequency_pct": 8, "budget_min": 500, "budget_max": 2000, "duration_weeks": "1-2", "solo_testable_pct": 70, "tier": "level_up"},
+    {"type": "Single-Site Web Scraper", "frequency_pct": 8, "budget_min": 200, "budget_max": 800, "duration_days": "2-5", "solo_testable_pct": 95, "tier": "easy_win"},
+    {"type": "Multi-Site Aggregator", "frequency_pct": 4, "budget_min": 500, "budget_max": 2000, "duration_days": "5-10", "solo_testable_pct": 90, "tier": "easy_win"},
+    {"type": "Payment Integration", "frequency_pct": 10, "budget_min": 300, "budget_max": 1500, "duration_days": "3-7", "solo_testable_pct": 95, "tier": "easy_win"},
+    {"type": "Complete Booking System", "frequency_pct": 8, "budget_min": 500, "budget_max": 3000, "duration_weeks": "1-2", "solo_testable_pct": 85, "tier": "easy_win"},
+    {"type": "Simple Report Generator", "frequency_pct": 12, "budget_min": 150, "budget_max": 800, "duration_days": "2-5", "solo_testable_pct": 95, "tier": "easy_win"},
+    {"type": "Complex Data Pipeline/ETL", "frequency_pct": 10, "budget_min": 800, "budget_max": 5000, "duration_weeks": "1-3", "solo_testable_pct": 65, "tier": "level_up"},
+    {"type": "Email Sequence Automation", "frequency_pct": 10, "budget_min": 200, "budget_max": 1000, "duration_days": "2-5", "solo_testable_pct": 90, "tier": "easy_win"},
+    {"type": "Multi-Channel Communication", "frequency_pct": 8, "budget_min": 500, "budget_max": 2500, "duration_weeks": "1-2", "solo_testable_pct": 75, "tier": "level_up"},
+    {"type": "Social Media Auto-Posting", "frequency_pct": 6, "budget_min": 150, "budget_max": 700, "duration_days": "2-4", "solo_testable_pct": 80, "tier": "easy_win"},
+    {"type": "Cloud/Server Deployment", "frequency_pct": 8, "budget_min": 200, "budget_max": 1000, "duration_days": "2-5", "solo_testable_pct": 90, "tier": "easy_win"}
+  ]
+}
