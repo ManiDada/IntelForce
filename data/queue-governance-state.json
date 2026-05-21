@@ -1,19 +1,24 @@
 {
   "blocked": true,
-  "checked_at": "2026-05-18T23:12:05.118171+00:00",
+  "checked_at": "2026-05-20T06:42:31.448150+00:00",
   "active_build_lane": 0,
-  "scored_candidates": 3,
-  "pending_proposals": 0,
+  "scored_candidates": 2,
+  "pending_proposals": 1,
   "status_counts": {
-    "proposal_ready": 1,
-    "scored": 2
+    "proposal_ready": 2
   },
   "top_scored": [
     {
-      "id": "test_idem_001",
-      "title": "API integration test",
+      "id": "upwork_022021643031290259540",
+      "title": "AI GTM Engineer for Marketing, Sales & Product Workflows",
       "status": "proposal_ready",
-      "score": 89.8
+      "score": 91.6
+    },
+    {
+      "id": "upwork_ai_automation_dev_llm",
+      "title": "AI Automation Developer for Data Summarization and LLM Integ",
+      "status": "proposal_ready",
+      "score": 59.4
     }
   ],
   "escalation_level": "critical",

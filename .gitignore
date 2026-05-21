@@ -13,3 +13,7 @@ build/
 .pytest_cache/
 node_modules/
 .coverage
+secrets/
+logs/
+data/seen_jobs.json
+data/cookie_refresh_needed.flag

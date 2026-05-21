@@ -1,0 +1,6 @@
+[13:01:54] VIPER RUN START
+[13:01:54] Starting Playwright scanner...
+  [SCANNER] page extraction error: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("[data-test=\"job-tile-list\"]") to be visible
+

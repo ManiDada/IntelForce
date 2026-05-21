@@ -1,0 +1,50 @@
+{
+  "mode": "manual_intake_cold_start",
+  "data_source": "serper",
+  "poll_interval_minutes": 64,
+  "queries_per_run": 3,
+  "speed_weight": 0.0,
+  "skill_weight": 0.8,
+  "competition_weight": 0.2,
+  "target_keywords": [
+    "zapier",
+    "make.com",
+    "n8n",
+    "makecom",
+    "make com"
+  ],
+  "budget_min_gbp": 150,
+  "budget_max_gbp": 400,
+  "max_competing_proposals": 15,
+  "require_verified_client": true,
+  "require_spend_history": true,
+  "score_threshold_ev": 65,
+  "daily_cap": 8,
+  "red_flag_keywords": [
+    "complex",
+    "multi-step",
+    "multiple integrations",
+    "code",
+    "script",
+    "various",
+    "several",
+    "many",
+    "full",
+    "custom code",
+    "development",
+    "build from scratch"
+  ],
+  "note": "Manual intake mode: speed irrelevant (human latency). Skill 80%, competition 20%.",
+  "portfolio_penalty": -15,
+  "portfolio_threshold": 2,
+  "portfolio_items": 2,
+  "portfolio_keywords": [
+    "portfolio",
+    "previous work",
+    "examples",
+    "loom",
+    "show us",
+    "similar work",
+    "case study"
+  ]
+}

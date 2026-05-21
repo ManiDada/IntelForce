@@ -1,0 +1,1 @@
+module.exports = { apps: [{ name: 'intelforce-discovery', script: '/Users/manidada/IntelForce/scripts/poll_and_notify.sh', interpreter: 'bash', cron_restart: '*/64 * * * *', watch: false, autorestart: false, env: { PATH: process.env.PATH } }] };

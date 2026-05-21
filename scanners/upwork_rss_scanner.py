@@ -18,16 +18,40 @@ sys.path.insert(0, str(ROOT))
 OUT = ROOT / "data" / "jobs.json"
 
 RSS_FEEDS = [
+    # Cold-start priority feeds (zapier / make.com / n8n easy wins)
     "https://www.upwork.com/ab/feed/jobs/rss?q=zapier+automation&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=api+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=make.com+automation&sort=recency&api_params=1",
     "https://www.upwork.com/ab/feed/jobs/rss?q=n8n+workflow&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=web+scraping+python&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=chatbot+automation&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=make+automation&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=discord+bot&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=openai+integration&sort=recency&api_params=1",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=google+sheets+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=zapier+workflow&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=make+automation+workflow&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=n8n+automation&sort=recency&api_params=1",
+    # Primary keywords
+    "https://www.upwork.com/ab/feed/jobs/rss?q=AI+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=AI+agent&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=LLM+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=OpenAI+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Claude+API&sort=recency&api_params=1",
     "https://www.upwork.com/ab/feed/jobs/rss?q=workflow+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=n8n&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Make.com&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Zapier+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Python+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=API+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=web+scraping&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Telegram+bot&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=chatbot+development&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=RAG+pipeline&sort=recency&api_params=1",
+    # Secondary keywords
+    "https://www.upwork.com/ab/feed/jobs/rss?q=HubSpot+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Pipedrive+integration&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=GoHighLevel+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=WhatsApp+bot&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Discord+bot&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=data+pipeline&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=web+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=Playwright&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=browser+automation&sort=recency&api_params=1",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=CRM+integration&sort=recency&api_params=1",
 ]
 
 SKILL_KEYWORDS = [
@@ -35,6 +59,8 @@ SKILL_KEYWORDS = [
     "chatbot", "bot", "discord", "slack", "telegram", "openai", "gpt",
     "langchain", "rag", "hubspot", "salesforce", "crm", "airtable", "notion",
     "webhook", "scraping", "selenium", "playwright", "javascript", "node",
+    "llm", "claude", "langchain", "n8n", "make", "playwright",
+    "gohighlevel", "hubspot", "pipedrive", "whatsapp",
 ]
 
 

@@ -1,20 +1,27 @@
 # Job Criteria
 
+## Cold Start Phase (current mode)
+
+This is the JSS-building strategy for the first 2-3 wins before moving upmarket. The goal is fast, easy closes on visual workflow tools (Zapier / Make.com / n8n) to build Job Success Score before targeting larger projects. All filters below apply in this mode.
+
 ## Must-Have Filters
 
 | Criterion | Threshold |
 |-----------|-----------|
-| Budget | £500+ (or $600+ USD) |
-| Skill match | ≥70% |
-| Timeline | Reasonable (not "in 24h for a 2-week job") |
-| Client signals | No red flags |
+| Platform focus | Zapier, Make.com, or n8n visual workflow builds ONLY |
+| Budget | Fixed price £150–400 (NOT hourly, NOT large projects) |
+| Complexity | Single clear deliverable — one automation, one workflow, one connection between two apps |
+| Client | Verified payment method required, must have spend history (>0 spent) |
+| Competition | Under 15 proposals (hard filter) |
+| Brief clarity | Specific deliverable must be stated — no vague briefs |
 
 ## Sweet Spot
 
-- Budget: £2,000–£10,000
-- Type: automation / integration / workflow / AI agent
-- Complexity: medium (not trivial, not 6-month enterprise)
-- Client: verified, budget history, clear requirements
+- Budget: £150–400 fixed price
+- Type: Zapier / Make.com / n8n single-workflow build
+- Complexity: simple — one automation, one integration, one clear output
+- Client: verified payment, has prior spend, clear requirements
+- Competition: <10 proposals ideal, hard cap at 15
 
 ## Automatic Red Flags (auto-reject regardless of score)
 
@@ -26,15 +33,20 @@
 - "Equity only" or "revenue share only" payment
 - New client with $0 spend and no verified payment
 - Client location mismatch with payment currency (fraud signal)
+- Contains: 'code', 'complex', 'multi-step', 'multiple integrations', 'various', 'etc'
+- Budget outside £100–500 range
+- No specific deliverable mentioned in the brief
+- Requires custom code / scripting alongside the workflow tool
+- 'several', 'many', 'full', 'custom code', 'development', 'build from scratch'
 
 ## Scoring Thresholds
 
 | EV Score | Action |
 |----------|--------|
 | ≥82 + confidence ≥85 | Auto-send eligible (requires gate_mode=auto_high_conf, currently OFF) |
-| ≥70 | Queue for human review |
-| 60–69 | Generate proposal but flag medium confidence |
-| <60 | Hold |
+| ≥65 | Queue for human review (cold start threshold) |
+| 55–64 | Generate proposal but flag medium confidence |
+| <55 | Hold |
 
 ## Skill Confidence Caps
 
@@ -54,8 +66,9 @@ When job requires a skill below threshold, cap confidence and flag:
 |-----------|----------|
 | <5 | Submit immediately if fit ≥70% |
 | 5–10 | Submit with strong tailored opening |
-| 10–20 | Only if strong skill match and differentiation |
-| 20–50 | Only if perfect fit and unique angle |
+| 10–15 | Only if strong skill match and differentiation (cold start hard cap) |
+| 15+ | Skip — hard filter in cold start mode |
+| 20–50 | Only if perfect fit and unique angle (post cold start) |
 | 50+ | Skip unless exceptional match |
 
 Client quality overrides competition count:
