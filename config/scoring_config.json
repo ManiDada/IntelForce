@@ -1,50 +1,25 @@
 {
-  "mode": "manual_intake_cold_start",
-  "data_source": "serper",
-  "poll_interval_minutes": 64,
-  "queries_per_run": 3,
+  "mode": "cold_start_gql_scanner",
   "speed_weight": 0.0,
-  "skill_weight": 0.8,
-  "competition_weight": 0.2,
-  "target_keywords": [
-    "zapier",
-    "make.com",
-    "n8n",
-    "makecom",
-    "make com"
-  ],
-  "budget_min_gbp": 150,
-  "budget_max_gbp": 400,
-  "max_competing_proposals": 15,
-  "require_verified_client": true,
-  "require_spend_history": true,
+  "skill_weight": 0.80,
+  "competition_weight": 0.20,
   "score_threshold_ev": 65,
+  "max_competing_proposals": 15,
+  "budget_min_gbp": 100,
+  "budget_max_gbp": 500,
   "daily_cap": 8,
-  "red_flag_keywords": [
-    "complex",
-    "multi-step",
-    "multiple integrations",
-    "code",
-    "script",
-    "various",
-    "several",
-    "many",
-    "full",
-    "custom code",
-    "development",
-    "build from scratch"
-  ],
-  "note": "Manual intake mode: speed irrelevant (human latency). Skill 80%, competition 20%.",
   "portfolio_penalty": -15,
-  "portfolio_threshold": 2,
   "portfolio_items": 2,
   "portfolio_keywords": [
-    "portfolio",
-    "previous work",
-    "examples",
-    "loom",
-    "show us",
-    "similar work",
-    "case study"
-  ]
+    "portfolio", "previous work", "examples", "loom", "show us",
+    "similar work", "case study", "past work"
+  ],
+  "red_flag_keywords": [
+    "cheapest", "lowest bid", "lowest price",
+    "equity only", "revenue share only", "commission only",
+    "blockchain", "solidity", "nft", "web3",
+    "mobile app", "react native", "flutter", "ios app", "android app",
+    "full-time employment", "part-time employment", "looking for employee"
+  ],
+  "note": "Cold-start GQL mode. EV = 0.80*skill + 0.20*win_probability. Proposals count unknown until upwork-mcp enrichment."
 }

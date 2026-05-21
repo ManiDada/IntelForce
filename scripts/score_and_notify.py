@@ -154,18 +154,22 @@ def format_proposal_request(job: dict, score: dict) -> str:
     ev = score["ev"]
     skill = score["skill_score"]
     win_prob = score["win_probability"]
-    competition = int(job.get("proposals_count") or 0)
-    budget = job.get("budget") or f"£{job.get('budget_min','?')}–{job.get('budget_max','?')}"
+    competition = job.get("proposals_count") or 0
+    budget = job.get("budget") or f"${job.get('budget_min','?')}–${job.get('budget_max','?')}"
     client_spent = job.get("client_spent") or "unknown"
+    client_verified = job.get("client_verified")
     title = job["title"][:70]
     url = job.get("url", "")
-    snipe = "🔴 SNIPE" if competition <= 5 else "📋 REVIEW"
+
+    props_str = f"{competition} proposals" if competition > 0 else "⚠️ proposals unknown"
+    client_str = f"{'✓' if client_verified else '✗'}" if client_verified is not None else "⚠️ unverified"
+    snipe = "🔴 SNIPE" if (competition > 0 and competition <= 5) else "📋 REVIEW"
 
     return (
         f"{snipe} — *{title}*\n\n"
         f"EV: {ev:.0f} | Skill: {skill:.0f}% | Win: {win_prob:.0f}%\n"
-        f"Budget: {budget} | Competition: {competition} proposals\n"
-        f"Client: {client_spent} spent | Verified: {'✓' if job.get('client_verified') else '✗'}\n\n"
+        f"Budget: {budget} | Competition: {props_str}\n"
+        f"Client: {client_spent} spent | Verified: {client_str}\n\n"
         f"[View Job]({url})\n\n"
         f"Wordsmith drafting proposal now..."
     )
@@ -230,9 +234,10 @@ def main() -> int:
             notified.add(job["id"])
             continue
 
-        # GO decision
-        is_snipe = competition <= 5
-        print(f"  {'🔴 SNIPE' if is_snipe else '✅ GO'} (EV {ev:.0f}, {competition} props): {job['title'][:50]}")
+        # GO decision — snipe only when we have confirmed low competition
+        is_snipe = competition > 0 and competition <= 5
+        props_label = f"{competition} props" if competition > 0 else "props unknown"
+        print(f"  {'🔴 SNIPE' if is_snipe else '✅ GO'} (EV {ev:.0f}, {props_label}): {job['title'][:50]}")
 
         if not args.dry_run:
             msg = format_proposal_request(job, score)
