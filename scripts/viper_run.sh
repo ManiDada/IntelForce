@@ -14,9 +14,9 @@ ts() { date -u +"%H:%M:%S"; }
 
 echo "[$(ts)] VIPER RUN START" >> "$LOG"
 
-# Step 1: GQL discovery (no enrichment until upwork-mcp Chrome session set up)
-echo "[$(ts)] GQL scan (title filter, no enrichment)..." >> "$LOG"
-python3 -m scanners.upwork_graphql_scanner --no-enrich --limit 30 >> "$LOG" 2>&1
+# Step 1: GQL discovery + Chrome CDP enrichment (proposals count + client data)
+echo "[$(ts)] GQL scan + CDP enrichment..." >> "$LOG"
+python3 -m scanners.upwork_graphql_scanner --limit 30 --max-enrich 20 >> "$LOG" 2>&1
 EXIT=$?
 
 if [[ $EXIT -ne 0 ]]; then

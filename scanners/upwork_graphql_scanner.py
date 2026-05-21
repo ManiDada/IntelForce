@@ -198,10 +198,11 @@ def passes_prefilter(job):
 
 
 def passes_fullfilter(job):
-    """Full hard filter — applied AFTER enrichment adds proposals + client data.
+    """Full hard filter — applied AFTER CDP enrichment.
 
-    proposals_count == 0 means 'unknown' (no enrichment ran or job is new).
-    client_verified == None means 'unknown'. Both are allowed through with a flag.
+    proposals_count == 0 means unknown (enrichment failed or new job).
+    proposals_count > 0 and > 15 → REJECT (hard cap).
+    client_verified == None → allow through (logged-out Chrome can't see client data).
     """
     count = job.get("proposals_count", 0)
     if count > 0 and count > 15:
@@ -258,11 +259,10 @@ def scan(limit=30, enrich=True, max_enrich=20):
 
     print(f"  [GQL] {len(candidates)} candidates after pre-filter")
 
-    # --- Phase 2: HTML enrichment (proposals count + client data) ---
+    # --- Phase 2: CDP enrichment (proposals count + client data) ---
     if enrich and candidates:
-        from scanners.upwork_job_enricher import enrich_jobs_batch
-        enrich_jobs_batch(candidates, visitor_token=tok,
-                          max_enrichments=max_enrich, verbose=True)
+        from scanners.upwork_cdp_enricher import enrich_jobs_batch
+        enrich_jobs_batch(candidates, max_enrichments=max_enrich, verbose=True)
 
     # --- Phase 3: Full filter ---
     new_jobs = [j for j in candidates if passes_fullfilter(j)]
