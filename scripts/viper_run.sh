@@ -15,8 +15,9 @@ ts() { date -u +"%H:%M:%S"; }
 echo "[$(ts)] VIPER RUN START" >> "$LOG"
 
 # Step 1: GQL discovery + Chrome CDP enrichment (proposals count + client data)
+# max-enrich 60 covers all candidates per run (avg ~55 per 10-query scan)
 echo "[$(ts)] GQL scan + CDP enrichment..." >> "$LOG"
-python3 -m scanners.upwork_graphql_scanner --limit 30 --max-enrich 20 >> "$LOG" 2>&1
+python3 -m scanners.upwork_graphql_scanner --limit 30 --max-enrich 60 >> "$LOG" 2>&1
 EXIT=$?
 
 if [[ $EXIT -ne 0 ]]; then

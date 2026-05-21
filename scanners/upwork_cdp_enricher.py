@@ -136,13 +136,25 @@ async def _enrich_job_async(page, cipher: str) -> dict:
         await page.goto(url, wait_until="networkidle", timeout=PAGE_TIMEOUT)
         await asyncio.sleep(2.0)
 
-        title = await page.title()
+        # Verify we actually landed on the right job (Chrome can serve wrong page
+        # if a previous navigation is still settling when we call goto)
         current_url = page.url
+        if cipher not in current_url:
+            # URL doesn't contain our cipher — navigate again with a fresh wait
+            await page.goto(url, wait_until="networkidle", timeout=PAGE_TIMEOUT)
+            await asyncio.sleep(2.5)
+            current_url = page.url
+
+        title = await page.title()
 
         if "challenge" in title.lower() or "Just a moment" in title:
             return {"error": "cloudflare_challenge"}
 
+        # Verify HTML belongs to the right job
         html = await page.content()
+        if cipher not in html and cipher not in current_url:
+            return {"error": f"wrong_page: {current_url[:60]}"}
+
         proposals = _find_proposals(html)
 
         # Retry once if proposals not found — some pages need an extra JS cycle
@@ -196,14 +208,10 @@ async def enrich_batch_async(
     try:
         browser = await pw.chromium.connect_over_cdp("http://127.0.0.1:9222")
 
-        # Use first available context/page
+        # Use the first context but create a FRESH page for each job —
+        # reusing the same page causes stale navigation state errors.
         contexts = browser.contexts
-        if contexts:
-            ctx = contexts[0]
-            page = ctx.pages[0] if ctx.pages else await ctx.new_page()
-        else:
-            ctx = await browser.new_context()
-            page = await ctx.new_page()
+        ctx = contexts[0] if contexts else await browser.new_context()
 
         enriched = 0
         for i, job in enumerate(candidates):
@@ -222,11 +230,16 @@ async def enrich_batch_async(
             if verbose:
                 print(f"  [CDP ENRICH] {cipher[:16]}… {job.get('title','')[:45]}")
 
-            data = await _enrich_job_async(page, cipher)
+            # Fresh page per job — avoids stale navigation state
+            page = await ctx.new_page()
+            try:
+                data = await _enrich_job_async(page, cipher)
+            finally:
+                await page.close()
 
             if "error" in data:
                 if verbose:
-                    print(f"    ⚠️  {data['error']}")
+                    print(f"    ⚠️  {data['error'][:60]}")
                 continue
 
             if data.get("proposals_count", -1) >= 0:
